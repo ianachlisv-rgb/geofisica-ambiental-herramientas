@@ -1,0 +1,25 @@
+% Aproximacion local del formato IEEE conferencia (solo para compilar el PDF sin IEEEtran.cls)
+\RequirePackage[letterpaper,top=0.75in,bottom=1.0in,left=0.625in,right=0.625in,columnsep=0.25in]{geometry}
+\RequirePackage{titlesec}
+\RequirePackage{caption}
+\RequirePackage{enumitem}
+\RequirePackage{float}
+\setlength{\parindent}{1em}
+\setlength{\parskip}{0pt}
+\titleformat{\section}{\centering\normalfont\small\scshape}{\Roman{section}.}{0.6em}{}
+\titlespacing*{\section}{0pt}{10pt}{4pt}
+\titleformat{\subsection}{\normalfont\small\itshape}{\Alph{subsection}.}{0.5em}{}
+\titlespacing*{\subsection}{0pt}{6pt}{2pt}
+\captionsetup[figure]{font=footnotesize,labelsep=period,justification=justified,singlelinecheck=false,skip=3pt}
+\captionsetup[table]{font=footnotesize,labelsep=newline,justification=centering,textfont=sc,skip=3pt}
+\renewcommand{\thetable}{\Roman{table}}
+\setlist{nosep,leftmargin=1.4em,itemsep=1pt}
+\newcommand{\IEEEauthorblockN}[1]{{\large #1}\\[2pt]}
+\newcommand{\IEEEauthorblockA}[1]{\small #1}
+\newcommand{\IEEEkeywordsname}{Palabras clave}
+\newenvironment{IEEEkeywords}{\par\vspace{4pt}\noindent\small\bfseries\itshape\IEEEkeywordsname---\bfseries\itshape}{\par\vspace{4pt}}
+\renewenvironment{abstract}{\par\noindent\small\bfseries\itshape Resumen---\bfseries\itshape}{\par}
+\makeatletter
+\renewcommand{\maketitle}{\twocolumn[{\begin{center}{\fontsize{22}{26}\selectfont\@title\par}\vspace{12pt}\begin{tabular}[t]{@{}c@{}}\@author\end{tabular}\par\vspace{6pt}\end{center}}]}
+\makeatother
+\AtBeginDocument{\small}

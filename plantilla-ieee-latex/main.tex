@@ -1,0 +1,55 @@
+% Plantilla de informe tipo IEEE (conferencia) en español.
+% Para compilar con la clase oficial en Overleaf: cambia la primera línea por \documentclass[conference]{IEEEtran}
+% y quita \usepackage{ieee_local} y la línea \babelprovide (usa babel [spanish]).
+\documentclass[10pt,twocolumn,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage[english]{babel}
+\babelprovide[import,main,hyphenrules=nohyphenation]{spanish}
+\addto\captionsspanish{\renewcommand{\figurename}{Fig.}\renewcommand{\tablename}{Tabla}\renewcommand{\refname}{Referencias}}
+\emergencystretch=3em \tolerance=1500
+\usepackage{amsmath}\usepackage{graphicx}\usepackage{booktabs}\usepackage{cite}\usepackage{url}\usepackage{microtype}
+\usepackage{ieee_local}
+\renewcommand{\IEEEkeywordsname}{Palabras clave}
+
+\begin{document}
+\title{T\'itulo del trabajo}
+\author{\IEEEauthorblockN{Nombre Apellido \hspace{1.5em} Nombre Apellido}
+\IEEEauthorblockA{\textit{Facultad o instituto}\\
+\textit{Universidad}\\
+Ciudad, Pa\'is}}
+\maketitle
+
+\begin{abstract}
+Resumen de 150 a 200 palabras: problema, m\'etodo, resultado principal y l\'imite del trabajo.
+\end{abstract}
+\begin{IEEEkeywords}
+palabra uno, palabra dos, palabra tres
+\end{IEEEkeywords}
+
+\section{Introducci\'on}
+Contexto y por qu\'e importa. Cita as\'i \cite{ejemplo}.
+
+\section{M\'etodo}
+\subsection{Datos}
+Describe los datos y su fuente.
+\begin{table}[!t]
+\caption{T\'itulo de la tabla}
+\centering\small
+\begin{tabular}{@{}lcc@{}}\toprule
+Columna A & Columna B & Columna C\\\midrule
+1 & 2 & 3\\\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Resultados}
+% \begin{figure}[!t]\centering\includegraphics[width=0.95\columnwidth]{figura.png}\caption{Pie de figura.}\end{figure}
+
+\section{Conclusiones}
+Qu\'e se encontr\'o y qu\'e limita el resultado.
+
+\begin{thebibliography}{99}
+\bibitem{ejemplo} A. Autor, ``T\'itulo del art\'iculo,'' \textit{Revista}, vol. 1, n.\textsuperscript{o} 1, pp. 1--10, 2026.
+\end{thebibliography}
+\end{document}
